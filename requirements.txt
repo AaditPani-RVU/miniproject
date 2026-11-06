@@ -1,0 +1,20 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+pydantic-settings>=2.3
+numpy>=1.26
+sentence-transformers>=3.0,<5
+pypdf>=4.0
+httpx>=0.27
+huggingface-hub>=0.24
+
+# Translation (IndicTrans2). IndicTransToolkit breaks on transformers 5.x, so keep it below 5.
+transformers>=4.44,<5
+torch
+sentencepiece
+sacremoses
+# not on the official index; install from the repo recommended by the IndicTrans2 README:
+#   pip install git+https://github.com/VarunGumma/IndicTransToolkit.git
+
+# LLM: run AgriParam with `brew install llama.cpp` + llama-server (see README).
+# (Optional in-process alternative: pip install llama-cpp-python, which failed to build/install on this Mac.)

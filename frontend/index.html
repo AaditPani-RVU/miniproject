@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kisan Sahayak · Wheat advisory desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+
+  <aside class="rail">
+    <div class="rail-top">
+      <p class="eyebrow reveal" style="--d:0">Wheat advisory desk · Uttar Pradesh</p>
+      <h1 class="reveal" style="--d:1">Kisan<br>Sahayak</h1>
+      <p class="hindi reveal" style="--d:2" lang="hi">किसान सहायक</p>
+
+      <svg class="ear reveal" style="--d:3" viewBox="0 0 120 300" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60 296 C58 230 62 170 60 70"/>
+          <path d="M60 70 L60 14"/>
+          <path d="M60 14 L60 2"/>
+          <g class="grains">
+            <path d="M60 66 C46 58 40 44 44 30 C56 36 62 52 60 66Z"/>
+            <path d="M60 66 C74 58 80 44 76 30 C64 36 58 52 60 66Z"/>
+            <path d="M60 104 C44 96 36 80 40 64 C54 70 62 88 60 104Z"/>
+            <path d="M60 104 C76 96 84 80 80 64 C66 70 58 88 60 104Z"/>
+            <path d="M60 142 C42 134 32 116 36 98 C52 104 62 124 60 142Z"/>
+            <path d="M60 142 C78 134 88 116 84 98 C68 104 58 124 60 142Z"/>
+            <path d="M60 180 C42 172 34 156 38 140 C52 146 62 162 60 180Z"/>
+            <path d="M60 180 C78 172 86 156 82 140 C68 146 58 162 60 180Z"/>
+          </g>
+          <path d="M60 250 C42 244 26 228 18 208 C40 212 56 226 60 250Z"/>
+          <path d="M60 232 C80 228 98 214 108 194 C84 196 66 210 60 232Z"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="rail-bottom reveal" style="--d:4">
+      <h2>Ask me about</h2>
+      <ul class="scope">
+        <li>Varieties &amp; sowing time</li>
+        <li>Seed rate &amp; fertilizer dose</li>
+        <li>Irrigation schedule</li>
+        <li>Weeds, pests &amp; diseases</li>
+        <li>Harvest &amp; storage</li>
+      </ul>
+      <p class="how">Every answer is the exact text of an ICAR bulletin, with its source. If the bulletins don't say, I'll say so.</p>
+      <div class="controls">
+        <label for="lang">Language</label>
+        <select id="lang" aria-label="Language"></select>
+        <span id="status" class="pill">connecting…</span>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <section id="chat" aria-live="polite">
+      <div class="empty" id="empty">
+        <p class="eyebrow">No. 01 · Open question</p>
+        <h2>Ask about<br>your <em>wheat.</em></h2>
+        <p class="lede">Type a question in English, हिन्दी, or Roman Hindi. Or start with one of these.</p>
+        <div class="chips" id="chips"></div>
+      </div>
+    </section>
+
+    <div class="dock">
+      <form id="form" autocomplete="off">
+        <label class="sr" for="q">Your question</label>
+        <textarea id="q" rows="1" placeholder="Type your question…" maxlength="600"></textarea>
+        <button id="send" type="submit" aria-label="Send">Ask <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="disclaimer">Guidance only. Confirm pesticide and fertilizer doses with your local Krishi Vigyan Kendra (KVK).</p>
+    </div>
+  </main>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
